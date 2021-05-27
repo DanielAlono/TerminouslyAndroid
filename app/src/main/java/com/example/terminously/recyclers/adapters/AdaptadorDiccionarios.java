@@ -1,4 +1,4 @@
-package com.example.terminously.recyclers;
+package com.example.terminously.recyclers.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,14 +10,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.terminously.R;
 import com.example.terminously.pojos.Diccionario;
+import com.example.terminously.recyclers.holders.HolderDiccionarios;
 
 import java.util.List;
 
-public class AdaptadorDiccionarios extends RecyclerView.Adapter {
+public class AdaptadorDiccionarios extends RecyclerView.Adapter implements View.OnClickListener {
 
     Context context;
     HolderDiccionarios holder;
     List<Diccionario> diccionarios;
+    View.OnClickListener clickListener;
     public AdaptadorDiccionarios(Context context, List<Diccionario> diccionarios){
         this.context = context;
         this.diccionarios = diccionarios;
@@ -28,7 +30,8 @@ public class AdaptadorDiccionarios extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.diccionarios_recycler,parent,false);
         holder = new HolderDiccionarios(view);
-        return null;
+        view.setOnClickListener(this);
+        return holder;
     }
 
     @Override
@@ -41,5 +44,15 @@ public class AdaptadorDiccionarios extends RecyclerView.Adapter {
         if(diccionarios != null)
             return diccionarios.size();
         return 0;
+    }
+
+    public void miOnClick(View.OnClickListener clickListener){
+        this.clickListener = clickListener;
+    }
+    @Override
+    public void onClick(View v) {
+        if(clickListener != null){
+            clickListener.onClick(v);
+        }
     }
 }

@@ -1,134 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentFichas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:id="@+id/vistaFichas">
+    android:orientation="vertical">
+
     <FrameLayout
+        android:id="@+id/cabecera"
         android:layout_width="match_parent"
-        android:layout_height="256dp"
-        android:id="@+id/cabecera">
+        android:layout_height="256dp">
+
         <ImageView
+            android:id="@+id/imagenTermino"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagenTermino"/>
+            android:layout_height="match_parent" />
+
         <TextView
+            android:id="@+id/nombreFicha_vista"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/nombreFicha_vista"
-            android:text="NombreFicha"
-            android:textSize="35dp"
-            android:textColor="@color/steelblue"
-            android:textStyle="bold"
-            android:fontFamily="casual"
             android:layout_gravity="bottom|center"
-            android:layout_margin="30dp"/>
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif-black"
+            android:text="NombreFicha"
+            android:textColor="#01618F"
+            android:textSize="40dp"
+            android:textStyle="bold" />
     </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <View
             android:layout_width="wrap_content"
             android:layout_height="2dp"
             android:layout_marginBottom="10dp"
-            android:background="@color/lightgray"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Categoría gramatical: "
-                android:textSize="18dp"
-                android:fontFamily="sans-serif-black"
-                android:textColor="@color/limegreen"
-                android:layout_marginLeft="5dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/categoriaGramatical"
-                android:text="categoriaGramatical"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-condensed-light"
-                android:layout_marginRight="5dp"/>
-        </LinearLayout>
+            android:background="@color/lightgray" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Categoría gramatical: "
+            android:textColor="@color/limegreen"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/categoriaGramatical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="categoriaGramatical"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-black"
             android:text="Definición: "
-            android:textSize="18dp"
-            android:fontFamily="sans-serif-black"
             android:textColor="@color/limegreen"
-            android:layout_marginLeft="5dp"/>
+            android:textSize="18dp" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/definicion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:justificationMode="inter_word"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            android:textSize="15dp"
-            android:fontFamily="sans-serif-condensed-light"
-            android:justificationMode="inter_word"
-            android:layout_margin="10dp"/>
+            android:textSize="15dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-black"
             android:text="Fuente de la definición:"
-            android:textSize="18dp"
-            android:fontFamily="sans-serif-black"
             android:textColor="@color/limegreen"
-            android:layout_marginLeft="5dp"/>
+            android:textSize="18dp" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/fuenteDefinicion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:justificationMode="inter_word"
             android:text="http://pdam01b.iesdoctorbalmis.info/apirest_terminously/Fichas"
-            android:textSize="15dp"
-            android:fontFamily="sans-serif-condensed-light"
-            android:justificationMode="inter_word"
-            android:layout_margin="10dp"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Registro: "
-                android:textSize="18dp"
-                android:fontFamily="sans-serif-black"
-                android:textColor="@color/limegreen"
-                android:layout_marginLeft="5dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/registro"
-                android:text="registro"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-condensed-light"
-                android:layout_marginRight="5dp"/>
-        </LinearLayout>
+            android:textSize="15dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Comentario: "
-            android:textSize="18dp"
+            android:layout_marginLeft="5dp"
             android:fontFamily="sans-serif-black"
+            android:text="Registro: "
             android:textColor="@color/limegreen"
-            android:layout_marginLeft="5dp"/>
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/registro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="registro"
+            android:textSize="15dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Comentario: "
+            android:textColor="@color/limegreen"
+            android:textSize="18dp" />
+
+        <TextView
             android:id="@+id/comentario"
-            android:text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae."
-            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-light"
             android:justificationMode="inter_word"
-            android:layout_margin="10dp"/>
+            android:text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae."
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp" />
     </LinearLayout>
 </LinearLayout>

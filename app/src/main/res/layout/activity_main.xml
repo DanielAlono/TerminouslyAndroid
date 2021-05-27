@@ -5,52 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/vistaDiccionarios"
-    tools:context=".MainActivity">
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/steelblue">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TERMINOUSLY"
-            android:fontFamily="casual"
-            android:textColor="@color/white"
-            android:textSize="20dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="icono"
-            android:layout_marginLeft="25dp"/>
-        <EditText
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginRight="10dp"
-            android:hint="buscar dicc..."
-            android:textColorHint="@color/lightgray"
-            android:textColor="@color/white"
-            android:gravity="right"/>
-    </androidx.appcompat.widget.Toolbar>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DICCIONARIOS"
-            android:fontFamily="casual"
-            android:textSize="40dp"
-            android:textColor="@color/limegreen"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="10dp"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/diccionariosRecycler"
-            android:layout_margin="10dp"/>
-    </LinearLayout>
+    tools:context=".MainActivity"
+    android:id="@+id/fragmentDiccionario">
+
+
 </LinearLayout>

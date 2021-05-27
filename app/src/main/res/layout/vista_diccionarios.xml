@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/vistaTerminos"
+    android:id="@+id/vistaDiccionarios"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -18,10 +19,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:fontFamily="casual"
             android:text="TERMINOUSLY"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:layout_gravity="center|left"/>
 
         <EditText
             android:id="@+id/buscador"
@@ -31,41 +34,25 @@
             android:layout_marginRight="10dp"
             android:backgroundTint="@color/white"
             android:gravity="right"
-            android:hint="buscar term..."
+            android:hint="buscar dicc..."
             android:textColor="@color/white"
             android:textColorHint="@color/lightgray" />
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/nombreDiccionario_terminos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="30dp"
-        android:text="NombreDiccionario"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="DICCIONARIOS"
         android:textColor="#01618F"
-        android:textSize="35dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="5dp"
-        android:text="Términos:"
-        android:textSize="25dp"
-        android:textStyle="bold" />
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="2dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/steelblue" />
+        android:textSize="40dp"
+        android:textStyle="bold"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/terminosRecycler"
+        android:id="@+id/diccionariosRecycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp" />
-
+        android:layout_height="match_parent" />
 </LinearLayout>

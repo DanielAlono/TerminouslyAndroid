@@ -24,7 +24,7 @@ public class Ficha {
     public String nombre;
     @SerializedName("CategoriaGramatical")
     @Expose
-    public CategoriaGramatical categoriaGramatical;
+    public int categoriaGramatical;
     @SerializedName("Definicion")
     @Expose
     public String definicion;
@@ -33,7 +33,7 @@ public class Ficha {
     public String fuenteDefinicion;
     @SerializedName("Registro")
     @Expose
-    public Registro registro;
+    public int registro;
     @SerializedName("Comentario")
     @Expose
     public String comentario;
@@ -65,11 +65,11 @@ public class Ficha {
         this.nombre = nombre;
     }
 
-    public CategoriaGramatical getCategoriaGramatical() {
+    public int getCategoriaGramatical() {
         return categoriaGramatical;
     }
 
-    public void setCategoriaGramatical(CategoriaGramatical categoriaGramatical) {
+    public void setCategoriaGramatical(int categoriaGramatical) {
         this.categoriaGramatical = categoriaGramatical;
     }
 
@@ -89,11 +89,11 @@ public class Ficha {
         this.fuenteDefinicion = fuenteDefinicion;
     }
 
-    public Registro getRegistro() {
+    public int getRegistro() {
         return registro;
     }
 
-    public void setRegistro(Registro registro) {
+    public void setRegistro(int registro) {
         this.registro = registro;
     }
 
