@@ -71,19 +71,20 @@ public class TerminosFragment extends Fragment {
                             String nombreTermino = "";
                             for (Ficha ficha : CacheService.GetInstance().getFICHAS()) {
                                 if (ficha.idTermino == x.idTermino) {
-                                    if (ficha.idIdioma.contains("ES"))
+                                    if (ficha.idIdioma.contains("ES")){
                                         nombreTermino = ficha.nombre;
+                                        if (buscador.getText().toString().compareTo(nombreTermino.substring(0, longitud)) == 0) {
+                                            subLista.add(x);
+                                        }
+                                    }
                                 }
-                            }
-                            if (buscador.getText().toString().compareTo(nombreTermino.substring(0, longitud)) == 0) {
-                                subLista.add(x);
                             }
 
                         } catch (StringIndexOutOfBoundsException e) {
                         }
-                        adaptador = new AdaptadorTerminos(getActivity(), subLista);
-                        recyclerView.setAdapter(adaptador);
                     }
+                    adaptador = new AdaptadorTerminos(getActivity(), subLista);
+                    recyclerView.setAdapter(adaptador);
                 }
             }
 

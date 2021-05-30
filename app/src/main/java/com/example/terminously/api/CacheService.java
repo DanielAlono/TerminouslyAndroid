@@ -16,7 +16,6 @@ public class CacheService {
     private List<Idioma> IDIOMA;
 
     private List<Termino> TERMINOS_DICCIONARIO;
-    private List<Ficha> FICHA_DICCIONARIO;
 
     private CacheService(){}
 
